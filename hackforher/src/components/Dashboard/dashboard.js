@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import SlackKarma from "../SlackKarma/slackKarma";
 import Jira from "../Jira/jira";
 import GitHubContibutions from "../GitHubContibutions/github";
-import Logo from '../../assets/images/image.png'
+import Image1 from '../../assets/images/image.png'
+import Image2 from '../../assets/images/image1.jpg'
 
 
 class Dashboard extends Component {
@@ -13,9 +14,10 @@ class Dashboard extends Component {
                 textinput
             </div>
 
-            <div>
-                slackKarma
-                <SlackKarma/>
+            <div className="slackKarma-container">
+                <h1>slackKarma</h1>
+                <SlackKarma imageKarma={Image1}/>
+                <SlackKarma imageKarma={Image2}/>
             </div>
 
             <div>
