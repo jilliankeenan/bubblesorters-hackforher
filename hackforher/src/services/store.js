@@ -29,7 +29,7 @@ export const slackData = (() => {
     }
 
     return data;
-})
+})();
 
 export const githubData = (() => {
     const topRepos = (() => {
@@ -50,14 +50,14 @@ export const githubData = (() => {
         }
     };
     return data;
-})
+})();
 
 export const userDefinedEvents = [];
 
 export default {
-    allData: [
+    allData: {
         slackData,
         githubData,
         userDefinedEvents
-    ]
+    }
 };
