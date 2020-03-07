@@ -1,11 +1,10 @@
-import React from "react"
-import "./button.scss"
+import React from 'react';
+import './button.scss';
 
-const Button = ({ stringLink }) => (
-  <a href={stringLink} className="btn10">
-    <span>View More</span>
-    <div className="transition" />
-  </a>
-)
+const Button = ({ stringLink, children }) => (
+	<button href={stringLink} className="social-button dribbble">
+		{children}
+	</button>
+);
 
-export default Button
+export default Button;
