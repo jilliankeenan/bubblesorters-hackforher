@@ -16,7 +16,7 @@ const getDateInFebruary = () => {
 }
 
 export const slackData = (() => {
-    const names = ['John', 'Sarah', 'Connor']
+    const names = ['Sinead', 'Sarah', 'Elaine']
     const thingsSaid = ['Thanks for helping with my last ticket.', 'You did a great talk yesterday!', 'Good job.']
     const data = [];
 
