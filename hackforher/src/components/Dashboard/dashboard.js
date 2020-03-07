@@ -11,11 +11,7 @@ class Dashboard extends Component {
         const { data } = this.props;
         return (
             <div>
-                <div className="slackKarma-container">
-                    <h1>slackKarma</h1>
-                    <SlackKarma imageKarma={Image1} />
-                    <SlackKarma imageKarma={Image2} />
-                </div>
+                <SlackKarma data={data.allData.slackData} />
 
                 <div>
                     <GitHubContibutions data={data.allData.githubData} />

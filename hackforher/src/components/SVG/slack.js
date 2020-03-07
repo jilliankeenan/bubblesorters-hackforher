@@ -1,8 +1,8 @@
 import React from "react";
 
-function Icon() {
+function Icon(props) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2447.6 2452.5" style={{ width: 180, height: 180 }}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2447.6 2452.5" style={{ width: 180, height: 180, ...props.style }}
         >
             <g fillRule="evenodd" clipRule="evenodd">
                 <path

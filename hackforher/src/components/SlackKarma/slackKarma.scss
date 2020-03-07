@@ -1,10 +1,10 @@
 .karma-container {
-    height: 150px;
-    width: 500px;
     display: flex;
     // justify-content: center;
     // align-items: center;
-    background-color:pink;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
 }
 
 .karma-image-container {
