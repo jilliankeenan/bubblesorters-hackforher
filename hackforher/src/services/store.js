@@ -1,4 +1,6 @@
-function randomIntFromInterval(min, max) { // min and max included 
+import { womenInTechQuotes } from './data'
+
+export function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
@@ -52,12 +54,33 @@ export const githubData = (() => {
     return data;
 })();
 
+export const jiraData = (() => {
+    const bugTitles = ['Bug 1', 'Bug 2', 'Bug 3'];
+    const featureTitles = ['Feature 1', 'Feature 2', 'Feature 3'];
+
+    return {
+        tickets: {
+            bugs: bugTitles.map(title => ({
+                title: title,
+                date: getDateInFebruary()
+            })),
+            features: featureTitles.map(title => ({
+                title: title,
+                date: getDateInFebruary(),
+                points: Math.floor(Math.random() * 100) + 1
+            }))
+        }
+    }
+})
+
 export const userDefinedEvents = [];
 
 export default {
     allData: {
         slackData,
         githubData,
+        jiraData,
         userDefinedEvents
-    }
+    },
+    womenInTechQuotes
 };
