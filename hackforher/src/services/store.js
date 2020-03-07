@@ -38,16 +38,16 @@ export const githubData = (() => {
         const repoNames = ['Product 1', 'Product 2', 'Product 3'];
         return repoNames.map((currentName, index) => ({
             name: repoNames[index],
-            commitTotal: Math.floor(Math.random() * 30) + 1
+            commitTotal: randomIntFromInterval(1, 60)
         }))
     })();
 
     const data = {
         contributions: {
-            prTotal: Math.floor(Math.random() * 10),
-            commitTotal: Math.floor(Math.random() * 100) + 1,
-            linesWrittenTotal: Math.floor(Math.random() * 400) + 1,
-            reviewsTotal: Math.floor(Math.random() * 15) + 1,
+            prTotal: randomIntFromInterval(1, 10),
+            commitTotal: randomIntFromInterval(1, 100),
+            linesWrittenTotal: randomIntFromInterval(50, 1000),
+            reviewsTotal: randomIntFromInterval(1, 15),
             topRepos: topRepos
         }
     };
@@ -67,7 +67,7 @@ export const jiraData = (() => {
             features: featureTitles.map(title => ({
                 title: title,
                 date: getDateInFebruary(),
-                points: Math.floor(Math.random() * 100) + 1
+                points: randomIntFromInterval(1, 100)
             }))
         }
     }
