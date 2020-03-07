@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import SlackKarma from "../SlackKarma/slackKarma";
 import Jira from "../Jira/jira";
+import GitHubContibutions from "../GitHubContibutions/github";
+
 class Dashboard extends Component {
     render() {
         return (
@@ -15,7 +17,8 @@ class Dashboard extends Component {
             </div>
 
             <div>
-                github
+                GitHub Contibutions
+                <GitHubContibutions/>
             </div>
 
             <div>
