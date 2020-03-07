@@ -1,12 +1,12 @@
 .GitHub-Container {
     height: 80vh;
-    width: 600px;
+    width: 100vw;
     background-color: pink;
     justify-content: center;
 }
 
 .TopRepoContrib-Container{
-
+    height: 40vh;
 }
 
 .TopRepoDetails-Container{
@@ -15,21 +15,23 @@
 
 .NumberStat-Container {
     height: 40vh;
-    width: 600px;
+    width: 100vw;
     background-color: black;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .PR-Container{
     height: 25vh;
-    width: 200px;
+    width: 30vw;
     background-color: cadetblue;
     justify-content: center;
     align-items: center;
 }
 
 .PRTitle-Container{
-    height: 5vh;
+    height: 10vh;
     width: 300px;
     background-color: chocolate;
     justify-content: center;
@@ -37,39 +39,45 @@
 }
 
 .PRDetails-Container{
-    height: 5vh;
-    width: 250px;
+    height: 15vh;
+    width: 300px;
     background-color: red;
 }
 
 .CodeLines-Container{
     background-color: rebeccapurple;
     height: 25vh;
-    width: 200px;
+    width: 30vw;
     justify-content: center;
     align-items: center;
 }
 
 .CodeLineTitle-Container{
-
-}
-
-.CodeLinesDetails-Container{
-
-}
-
-.CodeReviews-Container{
-    height: 25vh;
-    width: 300px; 
-    background-color: chocolate;
+    height: 10vh;
+    width: 300px;
+    background-color: red;
     justify-content: center;
     align-items: center;
 }
 
-.CodeReviewTitle-Container{
+.CodeLinesDetails-Container{
+    height: 15vh;
+    width: 300px;
+    background-color:purple;
+}
 
+.CodeReviews-Container{
+    height: 25vh;
+    width: 30vw; 
+    justify-content: center;
+    align-items: center;
+    background: salmon;
 }
 
 .CodeReviewDetails-Container{
-
+    height: 100vh;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
 }
