@@ -1,10 +1,9 @@
 import React from "react";
 
-function Icon() {
+function Icon(props) {
   return (
     <svg
-    style={{width: 180, height: 180}}
-
+      style={{width: 180, height: 180, ...props.style}}
       xmlns="http://www.w3.org/2000/svg"
       x="0"
       y="0"
