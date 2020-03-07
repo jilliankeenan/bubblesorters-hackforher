@@ -18,7 +18,7 @@ class Dashboard extends Component {
                 </div>
 
                 <div>
-                    <Jira></Jira>
+                    <Jira data={data.allData.jiraData}  ></Jira>
                 </div>
             </div>
         )
