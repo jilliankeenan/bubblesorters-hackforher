@@ -1,10 +1,10 @@
-import allData from './store';
+import allData, { randomIntFromInterval } from './store';
 
 export const getQuote = () => {
     return fetch('https://quotes.rest/qod?category=inspire&language=en')
         .then(response => response.json())
         .then(quoteResponse => {
-            const quoteData = quoteResponse.contents.quotes;
+            const quoteData = quoteResponse.contents.quotes[0];
             return {
                 quote: quoteData.quote,
                 author: quoteData.author,
@@ -17,7 +17,7 @@ export const getQuote = () => {
 }
 
 export const getRandomQuote = () => {
-    
+    return allData.womenInTechQuotes[randomIntFromInterval(0, allData.womenInTechQuotes.length)];
 }
 
 export const getAllData = () => {
