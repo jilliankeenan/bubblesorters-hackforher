@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon() {
+function Icon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ function Icon() {
       height="2500"
       preserveAspectRatio="xMidYMid"
       viewBox="0 -30.632 255.324 285.956"
-      style={{width: 180, height: 180}}
+      style={{width: 180, height: 180, ...props.style}}
     >
       <linearGradient id="a">
         <stop offset="0.18" stopColor="#0052cc"></stop>

@@ -90,6 +90,7 @@ function App() {
     setCurrentJarData(data);
     setShowResults(true);
     setHasRecentlySubmitted(true);
+    document.querySelector('#start').scrollIntoView({behavior: "smooth"})
 
     setTimeout(() => {
       setHasRecentlySubmitted(false);
@@ -131,6 +132,7 @@ function App() {
           </SourceTile>
         </ModalContainer>
       </Modal>
+      <div id='start'></div>
       {showResults && (
         <Dashboard data={currentJarData} />
       )}

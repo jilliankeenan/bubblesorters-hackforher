@@ -7,21 +7,19 @@ class Chart extends Component {
 	//     return propsHaveChanged;
 	// }
 
-	// static defaultProps = {
-	//     sentimentChartData: {},
-	//     displayTitle: true,
-	//     displayLegend: true,
-	//     legendPosition: 'right',
-	// };
+	static defaultProps = {
+	    displayLegend: true,
+	    legendPosition: 'right',
+	};
 
 	render() {
 		const data = {
-			labels: [ 'Red', 'Green', 'Yellow' ],
+			labels: [ 'Bugs', 'Features'],
 			datasets: [
 				{
-					data: [ 300, 50, 100 ],
-					backgroundColor: [ '#FF6384', '#36A2EB', '#FFCE56' ],
-					hoverBackgroundColor: [ '#FF6384', '#36A2EB', '#FFCE56' ]
+					data: [ 3, 3 ],
+					backgroundColor: [ '#df19a1', '#1566e0'],
+					hoverBackgroundColor: [ '#FF6384', '#36A2EB' ]
 				}
 			]
 		};

@@ -10,6 +10,7 @@ import Image1 from '../../assets/images/image.png'
 import Image2 from '../../assets/images/image1.jpg'
 import Image3 from '../../assets/images/image3.jpg'
 import Image4 from '../../assets/images/image4.jpg'
+import WrapperIcon from '../Wrapper';
 
 const images = [Image1, Image2, Image3, Image4];
 
@@ -71,7 +72,9 @@ const PersonWrapper = styled.div`
 const Slack = ({ data }) => {
 	return (
 		<Wrapper>
-			<SlackIcon style={{ width: 100, height: 100 }} />
+			<WrapperIcon>
+				<SlackIcon style={{ width: 100, height: 100 }} />
+			</WrapperIcon>
 			<div className="karma-container">
 				<Card width='100%' isFlex>
 					{data.map(({ whatTheySaid, name, dateGiven }, index) => (

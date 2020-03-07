@@ -17,7 +17,7 @@ const getDateInFebruary = () => {
 
 export const slackData = (() => {
     const names = ['Sinead', 'Sarah', 'Elaine']
-    const thingsSaid = ['Thanks for helping with my last ticket.', 'You did a great talk yesterday!', 'Good job.']
+    const thingsSaid = ['Thanks for helping with my last ticket.', 'You did a great talk yesterday, at the Go meetup', 'Good job on that React ticket!']
     const data = [];
 
     for (let index = 0; index < 3; index++) {
@@ -35,7 +35,7 @@ export const slackData = (() => {
 
 export const githubData = (() => {
     const topRepos = (() => {
-        const repoNames = ['Front End', 'Backend', 'Infra'];
+        const repoNames = ['@puppet/design-system', '@puppet/remediate-discovery', 'ui-react-components'];
         return repoNames.map((currentName, index) => ({
             name: repoNames[index],
             commitTotal: randomIntFromInterval(1, 60)
@@ -55,8 +55,8 @@ export const githubData = (() => {
 })();
 
 export const jiraData = (() => {
-    const bugTitles = ['API Broke', 'IE Specific problem', 'Security non-existant'];
-    const featureTitles = ['Working API', 'Beautiful Front End', 'Hacker-proof'];
+    const bugTitles = ['BUG-143: Modal Broken MacOS users', 'BUG-198: Chrome Specific UI problem', 'BUG-874: API Payload returning incorrect JSON'];
+    const featureTitles = ['JIRA-154: Puppet Radio Button', 'JIRA-190: Integration with GraphQL API', 'JIRA-156: Docker Release setup'];
 
     return {
         tickets: {
