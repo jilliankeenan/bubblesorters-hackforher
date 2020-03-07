@@ -71,7 +71,7 @@ export const jiraData = (() => {
             }))
         }
     }
-})
+})();
 
 export const userDefinedEvents = [];
 

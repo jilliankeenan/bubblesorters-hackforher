@@ -40,8 +40,6 @@ const Github = ({ data }) => {
                 </Card>
             </Card>
         </div>
-
-
     );
 };
 
