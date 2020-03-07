@@ -51,3 +51,5 @@ const githubData = () => {
     };
     return data;
 }
+
+export const userDefinedEvents = [];
