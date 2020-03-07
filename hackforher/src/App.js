@@ -65,6 +65,7 @@ function App() {
   const [isSourcesModalOpen, setIsSourcesModalOpen] = useState(false);
   const [currentJarData, setCurrentJarData] = useState({});
   const [showResults, setShowResults] = useState(false);
+  const [hasRecentlySubmitted, setHasRecentlySubmitted] = useState(false);
 
   const handleOpenSourceButton = () => {
     setIsSourcesModalOpen(true)
@@ -76,6 +77,11 @@ function App() {
       text: thought,
       tag
     });
+    setHasRecentlySubmitted(true);
+
+    setTimeout(() => {
+      setHasRecentlySubmitted(false);
+    }, 1000);
   };
 
   const handleBustIt = () => {
@@ -83,6 +89,11 @@ function App() {
     console.log(data)
     setCurrentJarData(data);
     setShowResults(true);
+    setHasRecentlySubmitted(true);
+
+    setTimeout(() => {
+      setHasRecentlySubmitted(false);
+    }, 1000);
   }
 
   return (
@@ -94,6 +105,7 @@ function App() {
       <Jar
         level={jarLevel}
         onBustIt={handleBustIt}
+        isShaking={hasRecentlySubmitted}
       />
       <EventEntry
         onSubmitEvent={handleSubmitEvent}

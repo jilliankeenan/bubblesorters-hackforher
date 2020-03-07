@@ -7,6 +7,13 @@ import Button from "../Button";
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+
+  ${({isShaking}) => isShaking && `
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+  `}
 `;
 
 const Buster = styled.div`
@@ -25,7 +32,7 @@ const Buster = styled.div`
 const LEVEL_HEIGHT = 20;
 const MAX_LEVEL = 12
 
-const Jar = ({ level = 0, onBustIt }) => {
+const Jar = ({ level = 0, onBustIt, isShaking }) => {
   const levels = [];
 
   for (let index = 0; index < level && index < MAX_LEVEL; index++) {
@@ -45,7 +52,7 @@ const Jar = ({ level = 0, onBustIt }) => {
 
   return (
     <Fragment>
-      <Wrapper>
+      <Wrapper isShaking={isShaking}>
         <svg viewBox="0 0 512 512" style={{ height: '60vh' }}>
           <path
             fill="#fff"
