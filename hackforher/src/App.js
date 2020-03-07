@@ -1,24 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
+import Modal from './components/Modal'
+import Jar from './components/Jar'
+import TopBar from './components/TopBar'
+import EventEntry from './components/EventEntry'
+import { post } from './services';
+import { userDefinedEvents } from './services/store'
 import './App.css';
 
+// console.log(userDefinedEvents, 'userDefinedEvents')
+
+// post({text: 'jill', tag: 'Course'})
+// post({text: 'jill', tag: 'Course'})
+// post({text: 'jill', tag: 'Course'})
+// post({text: 'jill', tag: 'Course'})
+
+// console.log(userDefinedEvents)
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopBar/>
+       
+       <Jar/>
+        <EventEntry/>
     </div>
   );
 }
