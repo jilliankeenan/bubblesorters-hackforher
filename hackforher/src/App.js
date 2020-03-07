@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
+import Dashboard from './components/Dashboard'
 import Jar from './components/Jar'
 import styled from 'styled-components';
 import TopBar from './components/TopBar'
@@ -109,6 +110,7 @@ function App() {
           </SourceTile>
         </ModalContainer>
       </Modal>
+      <Dashboard/>
     </div>
   );
 }
