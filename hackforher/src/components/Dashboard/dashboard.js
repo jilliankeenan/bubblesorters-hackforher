@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import SlackKarma from "../SlackKarma/slackKarma";
 import Jira from "../Jira/jira";
 import GitHubContibutions from "../GitHubContibutions/github";
+import Logo from '../../assets/images/image.png'
+
 
 class Dashboard extends Component {
     render() {
