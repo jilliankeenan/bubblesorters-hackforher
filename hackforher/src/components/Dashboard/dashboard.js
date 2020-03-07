@@ -8,27 +8,23 @@ import Image2 from '../../assets/images/image1.jpg'
 
 class Dashboard extends Component {
     render() {
+        const { data } = this.props;
         return (
-        <div>
             <div>
-                textinput
-            </div>
+                <div className="slackKarma-container">
+                    <h1>slackKarma</h1>
+                    <SlackKarma imageKarma={Image1} />
+                    <SlackKarma imageKarma={Image2} />
+                </div>
 
-            <div className="slackKarma-container">
-                <h1>slackKarma</h1>
-                <SlackKarma imageKarma={Image1}/>
-                <SlackKarma imageKarma={Image2}/>
-            </div>
+                <div>
+                    <GitHubContibutions data={data.allData.githubData} />
+                </div>
 
-            <div>
-                GitHub Contibutions
-                <GitHubContibutions/>
+                <div>
+                    <Jira></Jira>
+                </div>
             </div>
-
-            <div>
-                <Jira></Jira>
-            </div>
-        </div>
         )
     }
 }

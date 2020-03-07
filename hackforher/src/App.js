@@ -63,6 +63,8 @@ text-align: center;
 function App() {
   const [jarLevel, setJarLevel] = useState(0);
   const [isSourcesModalOpen, setIsSourcesModalOpen] = useState(false);
+  const [currentJarData, setCurrentJarData] = useState({});
+  const [showResults, setShowResults] = useState(false);
 
   const handleOpenSourceButton = () => {
     setIsSourcesModalOpen(true)
@@ -74,8 +76,14 @@ function App() {
       text: thought,
       tag
     });
-    console.log(getAllData());
   };
+
+  const handleBustIt = () => {
+    const data = getAllData();
+    console.log(data)
+    setCurrentJarData(data);
+    setShowResults(true);
+  }
 
   return (
     <div className="App">
@@ -85,6 +93,7 @@ function App() {
 
       <Jar
         level={jarLevel}
+        onBustIt={handleBustIt}
       />
       <EventEntry
         onSubmitEvent={handleSubmitEvent}
@@ -110,7 +119,9 @@ function App() {
           </SourceTile>
         </ModalContainer>
       </Modal>
-      <Dashboard/>
+      {showResults && (
+        <Dashboard data={currentJarData} />
+      )}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 .GitHub-Container {
-    height: 80vh;
-    width: 100vw;
-    background-color: pink;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background: #e2e1e0;
 }
 
 .TopRepoContrib-Container{

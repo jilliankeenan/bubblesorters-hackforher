@@ -25,7 +25,7 @@ const Buster = styled.div`
 const LEVEL_HEIGHT = 20;
 const MAX_LEVEL = 12
 
-const Jar = ({ level = 0 }) => {
+const Jar = ({ level = 0, onBustIt }) => {
   const levels = [];
 
   for (let index = 0; index < level && index < MAX_LEVEL; index++) {
@@ -93,7 +93,7 @@ const Jar = ({ level = 0 }) => {
         </svg>
       </Wrapper>
       <Buster show={isBustButtonShowing}>
-        <Button>Bust it!</Button>
+        <Button onClick={onBustIt}>Bust it!</Button>
       </Buster>
     </Fragment>
   );

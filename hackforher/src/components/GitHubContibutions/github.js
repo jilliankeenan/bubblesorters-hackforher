@@ -1,56 +1,48 @@
 import React, { Component } from "react"
+import { Card } from '../Card'
+import styled from 'styled-components';
+import HighlyGenericTitle from '../HighlyGenericTitle'
+import DashboardNumber from '../DashboardNumber'
 import './github.scss'
 
-class github extends Component {
-    render() {
-        return (
-        
+const LineItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+`;
+
+const Github = ({ data }) => {
+    return (
         <div className="GitHub-Container">
-            <div className="TopRepoContrib-Container">
-                Top Repository Contributions
-                <div className="TopRepoDetails-Container">
-                    1.
-                    2.
-                    3.
-                    4.
-                    5.
-                </div>
-            </div>
-            
-            <div className="NumberStat-Container">
-                <div className="PR-Container">
-                    <div className="PRTitle-Container">
-                        Pull Requests
-                    </div>
-                        <div className="PRDetails-Container">
-                            55
-                        </div>
-                    </div>
-
-                <div className="CodeLines-Container">
-                    <div className="CodeLineTitle-Container">
-                        Lines of Code
-                    </div>
-                    <div className="CodeLinesDetails-Container">
-                        49
-                    </div>
-                </div>
-
-                <div className="CodeReviews-Container">
-                    <div className="RodeReviewTitle">
-                        Code Reviews Completed
-                    </div>
-                    <div className="codeReviewDetails-Container">
-                        76
-                    </div>
-                </div>
-            </div>
-
+            <Card width='500px'>
+                <Card noShadow>
+                    <HighlyGenericTitle>Top Repos</HighlyGenericTitle>
+                    {data.contributions.topRepos.map(({ name, commitTotal }, index) => (
+                        <LineItem>
+                            <p>{`${index + 1}. ${name}`}</p>
+                            <p>{commitTotal} commits</p>
+                        </LineItem>
+                    ))}
+                </Card>
+            </Card>
+            <Card width='100%' isFlex>
+                <Card noShadow>
+                    <HighlyGenericTitle>Pull Requests</HighlyGenericTitle>
+                    <DashboardNumber>{data.contributions.prTotal}</DashboardNumber>
+                </Card>
+                <Card noShadow>
+                    <HighlyGenericTitle>Lines of Code</HighlyGenericTitle>
+                    <DashboardNumber>{data.contributions.linesWrittenTotal}</DashboardNumber>
+                </Card>
+                <Card noShadow>
+                    <HighlyGenericTitle>Code Reviews</HighlyGenericTitle>
+                    <DashboardNumber>{data.contributions.reviewsTotal}</DashboardNumber>
+                </Card>
+            </Card>
         </div>
-    
-        
-        )
-    }
-}
 
-export default github
+
+    );
+};
+
+export default Github
