@@ -12,9 +12,16 @@ const LineItem = styled.div`
     padding: .5rem;
 `;
 
+const Wrapper = styled.div`
+    background: #2684ff;
+    padding: 2rem;
+`;
+
 const Jira = ({ data }) => (
-	<div>
-		<JiraIcon />
+	<Wrapper>
+		<div style={{ backgroundColor: 'white', borderRadius: '50%', width: 210, height: 200 , padding: '0.8rem'}}>
+			<JiraIcon style={{ width: 100, height: 100}} />
+		</div>
 		<div className="jira-container">
 			
 			<Card width='500px'>
@@ -35,7 +42,7 @@ const Jira = ({ data }) => (
 				</Card>
 			</Card>
 		</div>
-	</div>
+	</Wrapper>
 	
 );
 

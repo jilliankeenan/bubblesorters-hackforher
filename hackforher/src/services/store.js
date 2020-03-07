@@ -17,7 +17,7 @@ const getDateInFebruary = () => {
 
 export const slackData = (() => {
     const names = ['John', 'Sarah', 'Connor']
-    const thingsSaid = ['I love you', 'Be with me', 'Poop']
+    const thingsSaid = ['Thanks for helping with my last ticket.', 'You did a great talk yesterday!', 'Good job.']
     const data = [];
 
     for (let index = 0; index < 3; index++) {
@@ -35,7 +35,7 @@ export const slackData = (() => {
 
 export const githubData = (() => {
     const topRepos = (() => {
-        const repoNames = ['Product 1', 'Product 2', 'Product 3'];
+        const repoNames = ['Front End', 'Backend', 'Infra'];
         return repoNames.map((currentName, index) => ({
             name: repoNames[index],
             commitTotal: randomIntFromInterval(1, 60)
@@ -55,8 +55,8 @@ export const githubData = (() => {
 })();
 
 export const jiraData = (() => {
-    const bugTitles = ['Bug 1', 'Bug 2', 'Bug 3'];
-    const featureTitles = ['Feature 1', 'Feature 2', 'Feature 3'];
+    const bugTitles = ['API Broke', 'IE Specific problem', 'Security non-existant'];
+    const featureTitles = ['Working API', 'Beautiful Front End', 'Hacker-proof'];
 
     return {
         tickets: {
