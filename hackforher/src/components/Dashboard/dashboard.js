@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import SlackKarma from "../SlackKarma/slackKarma";
-
+import Jira from "../Jira/jira";
 class Dashboard extends Component {
     render() {
         return (
@@ -19,7 +19,7 @@ class Dashboard extends Component {
             </div>
 
             <div>
-                jira
+                <Jira></Jira>
             </div>
         </div>
         )
