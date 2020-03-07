@@ -31,7 +31,7 @@ export const slackData = (() => {
     }
 
     return data;
-})
+})();
 
 export const githubData = (() => {
     const topRepos = (() => {
@@ -52,7 +52,7 @@ export const githubData = (() => {
         }
     };
     return data;
-})
+})();
 
 export const jiraData = (() => {
     const bugTitles = ['Bug 1', 'Bug 2', 'Bug 3'];
@@ -76,11 +76,11 @@ export const jiraData = (() => {
 export const userDefinedEvents = [];
 
 export default {
-    allData: [
+    allData: {
         slackData,
         githubData,
         jiraData,
         userDefinedEvents
-    ],
+    },
     womenInTechQuotes
 };
