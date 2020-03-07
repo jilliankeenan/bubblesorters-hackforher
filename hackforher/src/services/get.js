@@ -1,5 +1,6 @@
+import allData from './store';
 
-const getQuote = () => {
+export const getQuote = () => {
     return fetch('https://quotes.rest/qod?category=inspire&language=en')
         .then(response => response.json())
         .then(quoteResponse => {
@@ -13,4 +14,12 @@ const getQuote = () => {
         .catch(error => {
             console.log(error);
         });
+}
+
+export const getRandomQuote = () => {
+    
+}
+
+export const getAllData = () => {
+    return allData;
 }

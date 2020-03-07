@@ -13,7 +13,7 @@ const getDateInFebruary = () => {
     return february;
 }
 
-const slackData = () => {
+export const slackData = (() => {
     const names = ['John', 'Sarah', 'Connor']
     const thingsSaid = ['I love you', 'Be with me', 'Poop']
     const data = [];
@@ -29,9 +29,9 @@ const slackData = () => {
     }
 
     return data;
-}
+})
 
-const githubData = () => {
+export const githubData = (() => {
     const topRepos = (() => {
         const repoNames = ['Product 1', 'Product 2', 'Product 3'];
         return repoNames.map((currentName, index) => ({
@@ -50,6 +50,14 @@ const githubData = () => {
         }
     };
     return data;
-}
+})
 
 export const userDefinedEvents = [];
+
+export default {
+    allData: [
+        slackData,
+        githubData,
+        userDefinedEvents
+    ]
+};
